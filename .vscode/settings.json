@@ -1,0 +1,35 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/nanobot",
+        "${workspaceFolder}/nanobot/agent",
+        "${workspaceFolder}/nanobot/channels",
+        "${workspaceFolder}/nanobot/providers",
+        "${workspaceFolder}/nanobot/bus",
+        "${workspaceFolder}/nanobot/cli",
+        "${workspaceFolder}/nanobot/config",
+        "${workspaceFolder}/nanobot/cron",
+        "${workspaceFolder}/nanobot/heartbeat",
+        "${workspaceFolder}/nanobot/session",
+        "${workspaceFolder}/nanobot/templates",
+        "${workspaceFolder}/nanobot/utils"
+    ],
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+    "typescript.suggest.autoImports": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.venv": true,
+        "**/node_modules": true,
+        "**/dist": true
+    }
+}

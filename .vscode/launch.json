@@ -1,0 +1,67 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: NanoBot Agent (多轮)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/nanobot/__main__.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "VIRTUAL_ENV": "${workspaceFolder}/.venv"
+            },
+            "args": [
+                "agent"
+            ]
+        },
+        {
+            "name": "Python: NanoBot Agent (Debug Session)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/nanobot/__main__.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "VIRTUAL_ENV": "${workspaceFolder}/.venv"
+            },
+            "args": [
+                "agent",
+                "-s",
+                "debug:session1"
+            ]
+        },
+        {
+            "name": "Node.js: WhatsApp Bridge (Dev)",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/bridge",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Agent + Gateway Debug",
+            "configurations": [
+                "Python: NanoBot Agent (多轮)",
+                "Python: NanoBot Agent (Debug Session)"
+            ],
+            "stopAll": true
+        }
+    ]
+}

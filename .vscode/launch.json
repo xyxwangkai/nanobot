@@ -5,7 +5,7 @@
             "name": "Python: NanoBot Agent (多轮)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/nanobot/__main__.py",
+            "module": "nanobot",
             "console": "integratedTerminal",
             "justMyCode": false,
             "python": "${workspaceFolder}/.venv/bin/python",
@@ -21,7 +21,7 @@
             "name": "Python: NanoBot Agent (Debug Session)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/nanobot/__main__.py",
+            "module": "nanobot",
             "console": "integratedTerminal",
             "justMyCode": false,
             "python": "${workspaceFolder}/.venv/bin/python",
@@ -32,7 +32,7 @@
             "args": [
                 "agent",
                 "-s",
-                "debug:session1"
+                "websocket:debug-session1"
             ]
         },
         {
